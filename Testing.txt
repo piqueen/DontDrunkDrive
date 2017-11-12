@@ -1,0 +1,43 @@
+
+#include "Contact.h"
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+	string user;
+	vector <string> contactName, contactNum;
+	cout<< "Hey there, what should I call you?";
+	cin >> user;
+	cout<< "Hey " << user << " how's it going, good I hope. I want you to think about three people" <<
+			" that you trust with your life, because they will be you emergency contacts " <<
+			"in your time of trouble.";
+	cout<< "Please enter your first contact's name";
+	Contact cont1, cont2, cont3;
+	string name, num;
+	cin >> name;
+	cont1.setname(name);
+	contactName.push_back(name);
+	cout<<"Great, and now their number";
+	cin >> num;
+	cont1.setPhoneNum(num);
+	contactNum.push_back(num);
+	cout<< "Got it! You entered " << cont1.getName() << " as your life-line, hope you chose well!" <<
+			"One down, two to go! Please enter your your next contact's name";
+	cin >> name;
+	cont2.setname(name);
+	cout<<"Great, and now their number";
+	cin >> num;
+	cont2.setPhoneNum(num);
+	cout<< "Got it! You entered " << cont2.getName() << " as your life-line, hope you chose well!" <<
+			"Two down, one to go! Please enter your your next contact's name";
+	cin >> name;
+	cont3.setname(name);
+	cout<<"Great, and now their number";
+	cin >> num;
+	cont3.setPhoneNum(num);
+	cout<< "Got it! You entered " << cont1.getName() << " as your life-line, hope you chose well!" <<
+			"And you are all set!";
+
+	return 0;
+}
